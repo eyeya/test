@@ -1,0 +1,15 @@
+<?php 
+$serverName = 'localhost';
+//$userName = 'sa';
+//$userPassword = 'Devp@ssw0rd';
+$userName				= "hris_system";
+$userPassword		= "Devp@ssw0rd";
+$dbName = 'DB_HR';
+
+$connectionInfo = array("Database"=>$dbName, "UID"=>$userName, "PWD"=>$userPassword, "MultipleActiveResultSets"=>true,"CharacterSet"  => 'UTF-8','ReturnDatesAsStrings'=> true);
+$conn = sqlsrv_connect($serverName, $connectionInfo);
+
+if( $conn === false ) {
+die( print_r( sqlsrv_errors(), true));
+}
+?>
